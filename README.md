@@ -156,7 +156,7 @@ project/
 
 > *Login Page Admin*
 >
-> <img width="764" height="370" alt="image" src="https://github.com/user-attachments/assets/b00d1812-7bd2-4b36-acc0-ba71e7c64a24" />
+> <img width="800" height="377" alt="image" src="https://github.com/user-attachments/assets/3f420c9f-40f2-4d75-a3d1-c52d28e805dc" />
 >
 
 ---
@@ -165,23 +165,24 @@ project/
 
 > *Beranda — Hero Section*
 >
-> <img width="810" height="384" alt="image" src="https://github.com/user-attachments/assets/ef90a3ce-874f-4b0a-b6fa-b78a0ad7e209" />
+> <img width="797" height="380" alt="image" src="https://github.com/user-attachments/assets/ef17cf75-32f1-485d-99a1-6c1044012dcf" />
 >
 > *Beranda — Sekilas Info*
 >
-> <img width="814" height="389" alt="image" src="https://github.com/user-attachments/assets/46dcbd68-4bfd-465f-9570-ea8d1bbe8b4d" />
+> <img width="800" height="381" alt="image" src="https://github.com/user-attachments/assets/f7af28cd-67c3-4ece-82f9-8c5b6a5b11ca" />
+
 >
 > *Beranda — Artikel*
 >
-> <img width="800" height="382" alt="image" src="https://github.com/user-attachments/assets/a821c9fa-9788-48c7-9888-ec4c5e5e6e8a" />
+> <img width="800" height="382" alt="image" src="https://github.com/user-attachments/assets/f8023b4e-91d9-48bb-b8d6-e581de046e0e" />
 >
 > *Beranda — Kegiatan*
 >
-> <img width="799" height="380" alt="image" src="https://github.com/user-attachments/assets/3048cce8-8526-4145-bff3-caf57428a7a3" />
+> <img width="798" height="381" alt="image" src="https://github.com/user-attachments/assets/6c6b10a5-838b-4e2a-8867-08554ae20930" />
 >
 > *Beranda — Galeri Foto*
 >
-> <img width="794" height="379" alt="image" src="https://github.com/user-attachments/assets/4841e49e-314e-49b2-8a7f-0184abebd609" />
+> <img width="802" height="382" alt="image" src="https://github.com/user-attachments/assets/e2811c7b-68f5-45e8-9764-4dc88da9c3ca" />
 >
 
 ---
@@ -190,29 +191,31 @@ project/
 
 > *Sejarah Masjid*
 >
-> <img width="790" height="377" alt="image" src="https://github.com/user-attachments/assets/735d5e71-a4f8-4af4-a94f-17ef4d637bb6" />
+> <img width="793" height="379" alt="image" src="https://github.com/user-attachments/assets/d13ee087-1639-4c10-a9f8-06d846cd4050" />
 >
 > *Sejarah — Asal-Usul*
 >
-> <img width="796" height="379" alt="image" src="https://github.com/user-attachments/assets/c91a5bb4-ccce-4bd1-9a56-ef68d92f8150" />
+> <img width="793" height="378" alt="image" src="https://github.com/user-attachments/assets/2f3fd02c-1ab1-44b6-9e40-454639569202" />
 >
 > *Sejarah — Arsitektur dan Perkembangan*
 >
-> <img width="787" height="375" alt="image" src="https://github.com/user-attachments/assets/ffcb9e84-86b7-4349-8436-d3fbee10f8ed" />
+> <img width="793" height="379" alt="image" src="https://github.com/user-attachments/assets/0e46942d-4e5e-41cd-80bb-a68d62887992" />
 >
 > *Sejarah — Status Cagar dan Peran*
 >
-> <img width="747" height="356" alt="image" src="https://github.com/user-attachments/assets/2fad7db3-dc8c-454f-9cd8-faf8eac1d828" />
-> -
-> <img width="757" height="360" alt="image" src="https://github.com/user-attachments/assets/be0717ba-249e-4343-8520-20be16b81c47" />
+><img width="795" height="379" alt="image" src="https://github.com/user-attachments/assets/ce51baae-b649-4ec2-9916-1fd280a1ef74" />
+>
+> *Sejarah — Perjalanan Sejarah*
+> 
+> <img width="795" height="379" alt="image" src="https://github.com/user-attachments/assets/f0cc4b5f-fbea-4daa-b37c-c8e3a00b4121" />
 >
 > *Sejarah — Perjalanan Sejarah Lanjutan*
 >
-> <img width="746" height="354" alt="image" src="https://github.com/user-attachments/assets/8f67a28e-44f1-4b4e-8890-a685bac15f6d" />
+> <img width="794" height="377" alt="image" src="https://github.com/user-attachments/assets/61dca36a-4e8c-4d25-b76a-a2e23febec4c" />
 >
 > *Sejarah — Dulu dan Kini*
 >
-> <img width="763" height="365" alt="image" src="https://github.com/user-attachments/assets/d7a911bc-e767-415b-bc8f-edb376a7e534" />
+> <img width="795" height="379" alt="image" src="https://github.com/user-attachments/assets/407f37dd-5d5d-4760-b922-1d6776eb911e" />
 > 
 
 ---
@@ -221,19 +224,19 @@ project/
 
 > *Kegiatan*
 >
-> <img width="756" height="360" alt="image" src="https://github.com/user-attachments/assets/20a940fa-d230-42e2-894b-4809554e5dda" />
+> <img width="797" height="379" alt="image" src="https://github.com/user-attachments/assets/ac4197cb-10f9-4335-a51b-031f34ec002d" />
 >
 > *Kegiatan — Outing Class*
 >
-> <img width="760" height="364" alt="image" src="https://github.com/user-attachments/assets/b6accb9b-0740-40b0-9cab-1cde04af3eaf" />
+> <img width="794" height="378" alt="image" src="https://github.com/user-attachments/assets/d374a89f-fa29-4327-8fdf-38e451eda9f5" />
 >
 > *Kegiatan — Jadwal Program*
 >
-> <img width="760" height="364" alt="image" src="https://github.com/user-attachments/assets/e4d32df5-d999-4a2d-8df6-232844711aa9" />
+> <img width="797" height="379" alt="image" src="https://github.com/user-attachments/assets/10cab7d6-dd7d-423a-b5c4-d1ea4178d662" />
 >
 > *Kegiatan — Program Rutin Mingguan*
 >
-> <img width="772" height="300" alt="image" src="https://github.com/user-attachments/assets/1f7641e9-d180-4c00-985c-5cc3f06c674b" />
+> <img width="829" height="358" alt="image" src="https://github.com/user-attachments/assets/bc8d2829-a30e-460e-a1a2-1fe75667e9a8" />
 >
 
 ---
@@ -242,18 +245,18 @@ project/
 
 > *Galeri — Tampilan Grid Foto*
 >
-> <img width="766" height="365" alt="image" src="https://github.com/user-attachments/assets/9c43d916-1ae2-4cd8-a7e9-776ee369e1ff" />
+> <img width="794" height="379" alt="image" src="https://github.com/user-attachments/assets/48882601-c511-4324-87a8-b3148460bea8" />
 > -
-> <img width="770" height="369" alt="image" src="https://github.com/user-attachments/assets/5b2ff91f-1f39-444b-bfac-123f0cdf436d" />
+> <img width="794" height="380" alt="image" src="https://github.com/user-attachments/assets/1b303c0c-2952-438f-8eef-815952ba7cb6" />
 >
 
 ---
 
 ### Lokasi
 
-> <img width="749" height="350" alt="image" src="https://github.com/user-attachments/assets/3b28b645-846f-4498-98b3-7f0ac9551cb3" />
+> <img width="794" height="378" alt="image" src="https://github.com/user-attachments/assets/7fc77333-e941-46a5-8052-fcc8bce8f537" />
 > -
-> <img width="737" height="347" alt="image" src="https://github.com/user-attachments/assets/68dd1a36-98bf-483f-8f21-629391f1d0aa" />
+> <img width="799" height="382" alt="image" src="https://github.com/user-attachments/assets/38d66f5e-1b75-4853-b8ac-cfce907991af" />
 
 ---
 
@@ -261,11 +264,11 @@ project/
 
 > *Ulasan — Daftar Komentar*
 >
-> <img width="754" height="354" alt="image" src="https://github.com/user-attachments/assets/e296a1f7-c827-4646-baec-3420fca4ff4a" />
+> <img width="798" height="381" alt="image" src="https://github.com/user-attachments/assets/7510c160-fd8d-4060-a55f-b29494a89597" />
 >
 > *Ulasan — Form Input*
 >
-> <img width="756" height="360" alt="image" src="https://github.com/user-attachments/assets/363b8c70-a87a-4056-a76b-588204fe3272" />
+> <img width="794" height="378" alt="image" src="https://github.com/user-attachments/assets/95a71c55-0524-4a13-8fe6-68160532b8bf" />
 >
 
 ---
@@ -274,65 +277,64 @@ project/
 
 > *Dashboard — Halaman Utama*
 >
-> <img width="763" height="312" alt="image" src="https://github.com/user-attachments/assets/12ea64d9-f30b-4c2c-ab53-05df68076d94" />
+> <img width="798" height="311" alt="image" src="https://github.com/user-attachments/assets/5ef9a65d-bf4e-4f9b-b000-69225a8d6488" />
 > -
-> <img width="746" height="328" alt="image" src="https://github.com/user-attachments/assets/73852b3c-60c9-45b1-92a7-bed19745142b" />
+> <img width="798" height="381" alt="image" src="https://github.com/user-attachments/assets/17abe817-67e6-47d5-9a89-d05630fc2b99" />
 >
-> *Dashboard — Kelola Data*
->
-> <img src="link_dashboard_2" />
 
 ---
+
 ### Admin — Kelola Kegiatan 
 
 > *Tabel Data Kegiatan*
 >
-> <img width="784" height="366" alt="image" src="https://github.com/user-attachments/assets/15783d6d-d4f3-4127-92ba-785c5cb0518a" />
+> <img width="798" height="375" alt="image" src="https://github.com/user-attachments/assets/7be44bef-2ea3-48d9-9dc7-a8153ef2422e" />
 >
 > *Form Tambah Kegiatan*
 >
-> <img width="781" height="355" alt="image" src="https://github.com/user-attachments/assets/58f01c4f-527a-451b-af36-0e86a043ba3c" />
+> <img width="798" height="375" alt="image" src="https://github.com/user-attachments/assets/013a3476-3f68-438c-9abc-c4cc36fa78d8" />
 >
 > *Form Edit Kegiatan*
 >
-> <img width="761" height="356" alt="image" src="https://github.com/user-attachments/assets/be556d85-8abf-494a-92c7-f2dca85b1766" />
+> <img width="797" height="374" alt="image" src="https://github.com/user-attachments/assets/584bf10b-595a-4e84-b381-85f3e5e57f97" />
 >
 > *Aksi Hapus Kegiatan*
 >
-> <img width="754" height="356" alt="image" src="https://github.com/user-attachments/assets/2328d3d3-0ec0-4f23-b1fa-2e53f655d52f" />
+> <img width="797" height="374" alt="image" src="https://github.com/user-attachments/assets/c9a1f5e5-619f-4bbf-8ba9-49eb77cf754e" />
 
 ---
 ### Admin — Kelola Galeri 
 
 > *Tabel Data Galeri*
 >
-> <img width="773" height="363" alt="image" src="https://github.com/user-attachments/assets/2103d02c-6e32-4ef9-a4e4-e15f599fa903" />
+> <img width="796" height="379" alt="image" src="https://github.com/user-attachments/assets/d895fd52-52b0-4c54-94fc-9e3a98dd6a51" />
 >
 > *Form Tambah Galeri*
 >
-> <img width="775" height="369" alt="image" src="https://github.com/user-attachments/assets/13c2cbfa-8445-4ab2-80ba-08c2552f162b" />
+> <img width="795" height="377" alt="image" src="https://github.com/user-attachments/assets/c1a5429e-987d-4736-a848-13e9f3690c46" />
 >
 > *Form Edit Galeri*
 >
-> <img width="775" height="366" alt="image" src="https://github.com/user-attachments/assets/f56b970a-7367-49e0-b77c-613de35c5cfc" />
+> <img width="794" height="378" alt="image" src="https://github.com/user-attachments/assets/cb02868f-2c4f-41f5-81de-5757fd37063e" />
 >
 > *Aksi Hapus Galeri*
 >
-> <img width="753" height="359" alt="image" src="https://github.com/user-attachments/assets/e3345307-56bd-4871-b742-67067a614f72" />
+> <img width="794" height="378" alt="image" src="https://github.com/user-attachments/assets/47291b5a-cc0c-4355-93e3-b171d9061f74" />
+>
 
 ---
 ### Admin — Kelola Ulasan 
 
 > *Tabel Data Ulasan*
 >
-> <img width="749" height="353" alt="image" src="https://github.com/user-attachments/assets/301a6928-04c4-4730-b041-661a014078af" />
+> <img width="797" height="375" alt="image" src="https://github.com/user-attachments/assets/82088314-f2a1-483a-92f7-80d7147597fe" />
 >
 > *Ulasan Disetujui*
 >
-> <img width="750" height="355" alt="image" src="https://github.com/user-attachments/assets/e9af8908-10b2-494d-b6d1-eca8834dd7c3" />
+> <img width="795" height="375" alt="image" src="https://github.com/user-attachments/assets/850ec288-6944-413e-ba81-f901532a7fc3" />
 >
 > *Hapus Ulasan*
 > 
-> <img width="745" height="349" alt="image" src="https://github.com/user-attachments/assets/b39c8cdb-784d-4495-a7e5-8ebf736371c2" />
+> <img width="797" height="374" alt="image" src="https://github.com/user-attachments/assets/6132a006-7a5a-43bd-bbdf-3e3d80e0110f" />
 >
 ---
