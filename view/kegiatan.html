@@ -38,7 +38,6 @@
       </div>
     </nav>
 
-    <!-- Mobile Nav Drawer -->
     <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true">
       <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Tutup menu"><i class="fas fa-times"></i></button>
       <a href="index.html">Home</a>
@@ -49,7 +48,6 @@
       <a href="ulasan.html">Ulasan</a>
     </div>
 
-    <!-- ==================== PAGE HEADER ==================== -->
     <header class="page-header">
       <div class="container page-header-content">
         <div class="page-header-eyebrow"><i class="fas fa-calendar-check"></i> Program & Acara</div>
@@ -63,7 +61,6 @@
       </div>
     </header>
 
-    <!-- ==================== KEGIATAN PAGE ==================== -->
     <section class="kegiatan-page">
       <div class="container">
         <div v-if="isLoading" class="featured-kegiatan fade-up">
@@ -577,19 +574,16 @@
 
 
       return {
-        // State
         isLoading,
         isError,
         activeFilter,
         semuaKegiatan,
         selectedKegiatan,
 
-        // Computed
         filteredKegiatan,
         featuredEvent,
         kegiatanRutin,
 
-        // Methods
         loadKegiatan,
         getImageUrl,
         onImgError,
