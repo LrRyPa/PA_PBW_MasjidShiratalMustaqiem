@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri — Masjid Shiratal Mustaqiem Samarinda</title>
+  <link rel="icon" href="../assets/images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/publik.css" />
+  <link rel="stylesheet" href="../assets/css/galeri.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <nav id="navbar" class="scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-icon"><i class="fas fa-mosque"></i></div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-main">Masjid Shiratal Mustaqiem</span>
+          <span class="nav-brand-sub">Warisan Sejarah Masjid</span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sejarah.html">Sejarah</a></li>
+        <li><a href="kegiatan.html">Kegiatan</a></li>
+        <li><a href="galeri.html" class="active">Galeri</a></li>
+        <li><a href="lokasi.html">Lokasi</a></li>
+        <li><a href="ulasan.html">Ulasan</a></li>
+      </ul>
+      <button class="nav-toggler" id="nav-toggler" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true">
+    <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Tutup menu"><i class="fas fa-times"></i></button>
+    <a href="index.html">Home</a>
+    <a href="sejarah.html">Sejarah</a>
+    <a href="kegiatan.html">Kegiatan</a>
+    <a href="galeri.html" class="active">Galeri</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="ulasan.html">Ulasan</a>
+  </div>
+
+  <header class="page-header">
+    <div class="container page-header-content">
+      <div class="page-header-eyebrow"><i class="fas fa-images"></i> Dokumentasi Visual</div>
+      <h1 class="page-header-title">Galeri Foto</h1>
+      <p class="page-header-subtitle">Koleksi foto arsitektur, kegiatan, dan momen bersejarah Masjid Shiratal Mustaqiem.</p>
+      <nav class="breadcrumb">
+        <a href="index.html">Beranda</a>
+        <i class="fas fa-chevron-right"></i>
+        <span class="current">Galeri</span>
+      </nav>
+    </div>
+  </header>
+
+  <section class="galeri-page">
+    <div class="container">
+      <div class="galeri-filter fade-up">
+        <button class="filter-btn active">Semua Foto</button>
+        <button class="filter-btn">Eksterior</button>
+        <button class="filter-btn">Interior</button>
+        <button class="filter-btn">Kegiatan</button>
+        <button class="filter-btn">Arsitektur</button>
+        <button class="filter-btn">Sejarah</button>
+        <div class="galeri-count"><i class="fas fa-images"></i> 18 Foto</div>
+      </div>
+
+      <div id="app">
+        <div class="masonry-grid fade-up">
+          <div 
+            class="masonry-item"
+            v-for="g in filtered"
+            :key="g.id"
+            @click="openLightbox(g.gambar, g.judul)"
+          >
+            <img 
+              :src="imgThumb(g.gambar)"
+              :alt="g.judul"
+              @error="onImgError"
+            />
+            <div class="masonry-overlay">
+              <p><i class="fas fa-search-plus"></i> {{ g.judul }}</p>
+            </div>
+          </div>
+        </div>
+        <div 
+          class="lightbox"
+          :class="{ active: lightbox.show }"
+          @click.self="closeLightbox"
+        >
+          <div class="lightbox-content">
+            
+            <button class="lightbox-close" @click="closeLightbox">
+              &times;
+            </button>
+
+            <img :src="lightbox.img" class="lightbox-img" />
+
+            <div class="lightbox-caption">
+              {{ lightbox.caption }}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i class="fas fa-mosque"></i></div>
+            <div>
+              <div class="footer-logo-text">Shiratal Mustaqiem</div>
+              <div class="footer-logo-sub">Digital Heritage Samarinda</div>
+            </div>
+          </div>
+          <p class="footer-desc">Platform informasi digital untuk pelestarian warisan budaya Islam Masjid Shiratal Mustaqiem Samarinda.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+            <li><a href="sejarah.html"><i class="fas fa-chevron-right"></i> Sejarah</a></li>
+            <li><a href="kegiatan.html"><i class="fas fa-chevron-right"></i> Kegiatan</a></li>
+            <li><a href="galeri.html"><i class="fas fa-chevron-right"></i> Galeri</a></li>
+            <li><a href="lokasi.html"><i class="fas fa-chevron-right"></i> Lokasi</a></li>
+            <li><a href="ulasan.html"><i class="fas fa-chevron-right"></i> Ulasan</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informasi</h4>
+          <ul class="footer-links">
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Tentang Kami</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Jl. KH. Abul Hasan No. 1, Baqa, Samarinda Seberang, Kaltim</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@shiraatalmustaqiem.id</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Digital Heritage — Masjid Shiratal Mustaqiem Samarinda.</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" title="Kembali ke atas"><i class="fas fa-chevron-up"></i></button>
+  <script src="../assets/script/script.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script>
+    const API = '../api/galeri.php'; 
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          galeri: [],
+          filter: 'semua',
+          basePath: '../assets/images/galeri/',
+
+          lightbox: {
+            show: false,
+            img: '',
+            caption: ''
+          }
+        }
+      },
+
+      computed: {
+        filtered() {
+          if (this.filter === 'semua') return this.galeri;
+          return this.galeri.filter(g => 
+            (g.kategori || '').toLowerCase() === this.filter
+          );
+        }
+      },
+
+      methods: {
+        async loadGaleri() {
+          try {
+            const res = await fetch(API);
+            const json = await res.json();
+
+            this.galeri = json.data || [];
+
+            document.querySelector('.galeri-count').innerHTML =
+              `<i class="fas fa-images"></i> ${this.galeri.length} Foto`;
+
+          } catch (err) {
+            console.error("Gagal load galeri:", err);
+          }
+        },
+
+        imgThumb(file) {
+          return file ? this.basePath + file : '';
+        },
+
+        imgFull(file) {
+          return file ? this.basePath + file : '';
+        },
+
+        onImgError(e) {
+          e.target.src = 'https://via.placeholder.com/600x400?text=No+Image';
+        },
+
+        setFilter(kategori) {
+          this.filter = kategori.toLowerCase();
+        },
+
+        openLightbox(file, judul) {
+          console.log("CLICK:", file);
+          this.lightbox.show = true;
+          this.lightbox.img = this.basePath + file;
+          this.lightbox.caption = judul;
+        },
+
+        closeLightbox() {
+          this.lightbox.show = false;
+        }
+      },
+
+      mounted() {
+        console.log("VUE MOUNTED")
+        this.loadGaleri();
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const text = btn.innerText.toLowerCase();
+
+            if (text.includes('semua')) this.setFilter('semua');
+            else if (text.includes('eksterior')) this.setFilter('eksterior');
+            else if (text.includes('interior')) this.setFilter('interior');
+            else if (text.includes('kegiatan')) this.setFilter('kegiatan');
+            else if (text.includes('arsitektur')) this.setFilter('arsitektur');
+            else if (text.includes('sejarah')) this.setFilter('sejarah');
+          });
+        });
+
+        window.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            this.closeLightbox();
+          }
+        });
+      }
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+</html>

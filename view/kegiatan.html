@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kegiatan — Masjid Shiratal Mustaqiem Samarinda</title>
+  <link rel="icon" href="../assets/images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/publik.css" />
+  <link rel="stylesheet" href="../assets/css/kegiatan.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+
+<body>
+  <div id="app-kegiatan">
+
+    <nav id="navbar" class="scrolled">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+          <div class="nav-brand-icon"><i class="fas fa-mosque"></i></div>
+          <div class="nav-brand-text">
+            <span class="nav-brand-main">Masjid Shiratal Mustaqiem</span>
+            <span class="nav-brand-sub">Warisan Sejarah Masjid</span>
+          </div>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sejarah.html">Sejarah</a></li>
+          <li><a href="kegiatan.html" class="active">Kegiatan</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="lokasi.html">Lokasi</a></li>
+          <li><a href="ulasan.html">Ulasan</a></li>
+        </ul>
+        <button class="nav-toggler" id="nav-toggler" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true">
+      <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Tutup menu"><i class="fas fa-times"></i></button>
+      <a href="index.html">Home</a>
+      <a href="sejarah.html">Sejarah</a>
+      <a href="kegiatan.html" class="active">Kegiatan</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="lokasi.html">Lokasi</a>
+      <a href="ulasan.html">Ulasan</a>
+    </div>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <header class="page-header">
+      <div class="container page-header-content">
+        <div class="page-header-eyebrow"><i class="fas fa-calendar-check"></i> Program & Acara</div>
+        <h1 class="page-header-title">Kegiatan & Acara</h1>
+        <p class="page-header-subtitle">Program keagamaan, budaya, dan pendidikan yang diselenggarakan di Masjid Shiratal Mustaqiem.</p>
+        <nav class="breadcrumb">
+          <a href="index.html">Beranda</a>
+          <i class="fas fa-chevron-right"></i>
+          <span class="current">Kegiatan</span>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==================== KEGIATAN PAGE ==================== -->
+    <section class="kegiatan-page">
+      <div class="container">
+        <div v-if="isLoading" class="featured-kegiatan fade-up">
+          <div>
+            <div class="featured-skeleton" style="width:120px; height:28px; border-radius:50px;"></div>
+            <div class="featured-skeleton" style="height:2rem; width:80%; margin-top:1rem;"></div>
+            <div class="featured-skeleton" style="height:1rem; width:100%; margin-top:0.5rem;"></div>
+            <div class="featured-skeleton" style="height:1rem; width:90%; margin-top:0.4rem;"></div>
+            <div class="featured-skeleton" style="height:1rem; width:70%; margin-top:0.4rem;"></div>
+          </div>
+          <div class="featured-skeleton" style="height:260px; border-radius:var(--radius-lg);"></div>
+        </div>
+
+        <div
+          v-if="!isLoading && featuredEvent"
+          class="featured-kegiatan"
+        >
+          <div>
+            <span
+              class="kegiatan-badge"
+              :class="getBadgeClass(featuredEvent.status)"
+              style="margin-bottom:1rem; display:inline-block;"
+            >
+              <i class="fas fa-star"></i> Acara Unggulan
+            </span>
+            <h2 class="featured-kegiatan-title">{{ featuredEvent.judul }}</h2>
+            <p class="featured-kegiatan-desc">{{ featuredEvent.deskripsi }}</p>
+
+            <div class="kegiatan-meta-list">
+              <div class="kegiatan-meta-item">
+                <i class="fas fa-calendar"></i>
+                {{ formatTanggal(featuredEvent.tanggal) }}
+              </div>
+              <div class="kegiatan-meta-item" v-if="featuredEvent.waktu_mulai || featuredEvent.waktu_selesai">
+                <i class="fas fa-clock"></i>
+                {{ formatWaktu(featuredEvent.waktu_mulai) }}
+                <span v-if="featuredEvent.waktu_selesai"> – {{ formatWaktu(featuredEvent.waktu_selesai) }} WITA</span>
+              </div>
+              <div class="kegiatan-meta-item" v-if="featuredEvent.lokasi">
+                <i class="fas fa-map-marker-alt"></i>
+                {{ featuredEvent.lokasi }}
+              </div>
+              <div class="kegiatan-meta-item">
+                <i class="fas fa-users"></i> Terbuka untuk Umum · Gratis
+              </div>
+            </div>
+
+            <a href="lokasi.html" class="btn btn-primary">
+              <i class="fas fa-map-marker-alt"></i> Lihat Lokasi
+            </a>
+          </div>
+          <img
+            class="featured-kegiatan-img"
+            :src="getImageUrl(featuredEvent.gambar)"
+            :alt="featuredEvent.judul"
+            @error="onImgError($event)"
+          />
+        </div>
+
+        <div class="section-header fade-up">
+          <span class="section-label">Semua Event</span>
+          <h2 class="section-title">Jadwal Program</h2>
+        </div>
+
+        <div class="kegiatan-filter fade-up">
+
+          <button
+            class="filter-btn"
+            :class="{ active: activeFilter === 'all' }"
+            @click="activeFilter = 'all'"
+          >Semua</button>
+
+          <button
+            class="filter-btn"
+            :class="{ active: activeFilter === 'upcoming' }"
+            @click="activeFilter = 'upcoming'"
+          >Akan Datang</button>
+
+          <button
+            class="filter-btn"
+            :class="{ active: activeFilter === 'ongoing' }"
+            @click="activeFilter = 'ongoing'"
+          >Berlangsung</button>
+
+          <button
+            class="filter-btn"
+            :class="{ active: activeFilter === 'selesai' }"
+            @click="activeFilter = 'selesai'"
+          >Selesai</button>
+        </div>
+
+        <div class="kegiatan-main-grid">
+          <template v-if="isLoading">
+            <div
+              v-for="n in 6"
+              :key="'skel-' + n"
+              class="kegiatan-card"
+              style="background:var(--off-white); border-radius:var(--radius-lg); overflow:hidden;"
+            >
+              <div style="height:200px; background:linear-gradient(90deg,#e5e7eb 25%,#f3f4f6 50%,#e5e7eb 75%); background-size:200% 100%; animation:shimmer 1.4s infinite;"></div>
+              <div style="padding:1.5rem;">
+                <div style="height:0.7rem; width:40%; background:#e5e7eb; border-radius:4px; margin-bottom:0.75rem;"></div>
+                <div style="height:1rem; width:90%; background:#e5e7eb; border-radius:4px; margin-bottom:0.5rem;"></div>
+                <div style="height:0.85rem; width:75%; background:#e5e7eb; border-radius:4px;"></div>
+              </div>
+            </div>
+          </template>
+
+          <div v-else-if="isError" class="state-error">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Gagal memuat data kegiatan. Silakan coba lagi.</p>
+            <button
+              class="btn btn-emerald"
+              style="margin-top:1rem;"
+              @click="loadKegiatan"
+            >
+              <i class="fas fa-redo"></i> Coba Lagi
+            </button>
+          </div>
+
+          <div v-else-if="filteredKegiatan.length === 0" class="state-empty">
+            <i class="fas fa-calendar-times"></i>
+            <p>Tidak ada kegiatan untuk filter yang dipilih.</p>
+          </div>
+
+          <div
+            v-else
+            v-for="(item, index) in filteredKegiatan"
+            :key="item.id"
+            class="kegiatan-card "
+            :data-status="item.status"
+            :style="{ transitionDelay: (index % 3) * 0.08 + 's' }"
+          >
+            <div class="kegiatan-card-img">
+              <img
+                :src="getImageUrl(item.gambar)"
+                :alt="item.judul"
+                loading="lazy"
+                @error="onImgError($event)"
+              />
+              <span class="kegiatan-badge" :class="getBadgeClass(item.status)">
+                {{ getLabelStatus(item.status) }}
+              </span>
+            </div>
+
+            <div class="kegiatan-card-body">
+              <div class="kegiatan-date">
+                <i class="fas fa-calendar-alt"></i>
+                <span v-if="item.tipe === 'rutin' && item.hari">{{ item.hari }}</span>
+                <span v-else>{{ formatTanggal(item.tanggal) }}</span>
+              </div>
+              <h3>{{ item.judul }}</h3>
+              <p>{{ truncate(item.deskripsi, 100) }}</p>
+
+              <div class="kegiatan-card-tags">
+                <span v-if="item.tipe" class="tag" :class="getTagClass(item.tipe)">
+                  {{ item.tipe.charAt(0).toUpperCase() + item.tipe.slice(1) }}
+                </span>
+              </div>
+            </div>
+
+            <div class="kegiatan-card-footer">
+              <div
+                class="kegiatan-meta-item"
+                style="font-size:0.78rem; color:var(--gray-400);"
+              >
+                <i class="fas fa-users"></i>
+                <span v-if="item.waktu_mulai">
+                  {{ formatWaktu(item.waktu_mulai) }}
+                  <span v-if="item.waktu_selesai"> – {{ formatWaktu(item.waktu_selesai) }}</span>
+                </span>
+                <span v-else>Terbuka Umum</span>
+              </div>
+              <a href="#" class="kegiatan-detail-link" @click.prevent="selectedKegiatan = item">
+                Detail <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="program-rutin">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="section-label">Jadwal Tetap</span>
+          <h2 class="section-title">Program Rutin Mingguan</h2>
+          <p class="section-subtitle">Kegiatan yang berlangsung secara rutin setiap minggu di Masjid Shiratal Mustaqiem.</p>
+        </div>
+
+        <div class="table-responsive-wrapper">
+          <table class="program-table fade-up">
+            <thead>
+              <tr>
+                <th>Kegiatan</th>
+                <th>Hari</th>
+                <th>Waktu</th>
+                <th>Tempat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-if="isLoading">
+                <td colspan="5" style="text-align:center; padding:2rem; color:var(--gray-400);">
+                  <i class="fas fa-spinner fa-spin" style="margin-right:0.5rem;"></i>
+                  Memuat jadwal rutin...
+                </td>
+              </tr>
+              <tr v-else-if="kegiatanRutin.length === 0">
+                <td colspan="5" style="text-align:center; padding:2rem; color:var(--gray-400);">
+                  Belum ada jadwal rutin tersedia.
+                </td>
+              </tr>
+
+              <tr
+                v-else
+                v-for="item in kegiatanRutin"
+                :key="item.id"
+              >
+                <td>{{ item.judul }}</td>
+                <td>{{ item.hari || '-' }}</td>
+                <td class="program-time">
+                  {{ formatWaktu(item.waktu_mulai) }}
+                  <span v-if="item.waktu_selesai"> – {{ formatWaktu(item.waktu_selesai) }}</span>
+                </td>
+                <td>{{ item.lokasi || '-' }}</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="footer-logo-icon"><i class="fas fa-mosque"></i></div>
+              <div>
+                <div class="footer-logo-text">Shiratal Mustaqiem</div>
+                <div class="footer-logo-sub">Digital Heritage Samarinda</div>
+              </div>
+            </div>
+            <p class="footer-desc">Platform informasi digital untuk pelestarian warisan budaya Islam Masjid Shiratal Mustaqiem Samarinda.</p>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Navigasi</h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+              <li><a href="sejarah.html"><i class="fas fa-chevron-right"></i> Sejarah</a></li>
+              <li><a href="kegiatan.html"><i class="fas fa-chevron-right"></i> Kegiatan</a></li>
+              <li><a href="galeri.html"><i class="fas fa-chevron-right"></i> Galeri</a></li>
+              <li><a href="lokasi.html"><i class="fas fa-chevron-right"></i> Lokasi</a></li>
+              <li><a href="ulasan.html"><i class="fas fa-chevron-right"></i> Ulasan</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Informasi</h4>
+            <ul class="footer-links">
+              <li><a href="#"><i class="fas fa-chevron-right"></i> Tentang Kami</a></li>
+              <li><a href="#"><i class="fas fa-chevron-right"></i> Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Kontak</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Jl. KH. Abul Hasan No. 1, Baqa, Samarinda Seberang, Kaltim</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@shiraatalmustaqiem.id</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Digital Heritage — Masjid Shiratal Mustaqiem Samarinda.</span>
+        </div>
+      </div>
+    </footer>
+
+    <button id="back-to-top" title="Kembali ke atas"><i class="fas fa-chevron-up"></i></button>
+
+    <div class="modal-overlay" v-if="selectedKegiatan" @click.self="selectedKegiatan = null">
+      <div class="modal-content">
+
+        <button class="modal-close" @click="selectedKegiatan = null">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <img :src="getImageUrl(selectedKegiatan.gambar)" class="modal-img"/>
+
+        <div class="modal-body">
+          <span class="kegiatan-badge" :class="getBadgeClass(selectedKegiatan.status)">
+            {{ getLabelStatus(selectedKegiatan.status) }}
+          </span>
+
+          <h2>{{ selectedKegiatan.judul }}</h2>
+          <p class="modal-desc">{{ selectedKegiatan.deskripsi }}</p>
+
+          <div class="modal-info">
+            <div><i class="fas fa-calendar"></i> {{ formatTanggal(selectedKegiatan.tanggal) }}</div>
+            <div><i class="fas fa-clock"></i> 
+              {{ formatWaktu(selectedKegiatan.waktu_mulai) }} 
+              <span v-if="selectedKegiatan.waktu_selesai">
+                – {{ formatWaktu(selectedKegiatan.waktu_selesai) }}
+              </span>
+            </div>
+            <div v-if="selectedKegiatan.lokasi">
+              <i class="fas fa-map-marker-alt"></i> {{ selectedKegiatan.lokasi }}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+
+  <script>
+  const { createApp, ref, computed, onMounted, nextTick } = Vue;
+
+  createApp({
+
+    setup() {
+
+      const semuaKegiatan = ref([]);  
+
+      const isLoading     = ref(true);   
+      const isError       = ref(false);  
+      const selectedKegiatan = ref(null);
+      const activeFilter  = ref('all');  
+
+      const API_URL = '../api/kegiatan.php';
+      const PLACEHOLDER = 'https://images.unsplash.com/photo-1564769625905-50e93615e769?w=600&q=80';
+
+      async function loadKegiatan() {
+        isLoading.value = true;
+        isError.value   = false;
+
+        try {
+          const response = await fetch(API_URL);
+
+          if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+          }
+
+          const json = await response.json();
+    
+          if (Array.isArray(json)) {
+            semuaKegiatan.value = json;
+          } else if (json.data && Array.isArray(json.data)) {
+            semuaKegiatan.value = json.data;
+          } else {
+            const firstArray = Object.values(json).find(v => Array.isArray(v));
+            semuaKegiatan.value = firstArray || [];
+          }
+
+        } catch (error) {
+          console.error('[Kegiatan] Fetch error:', error);
+          isError.value = true;
+        } finally {
+          isLoading.value = false;
+
+          await nextTick();
+          if (typeof AOS !== 'undefined') AOS.refresh();
+        }
+      }
+
+      const filteredKegiatan = computed(() => {
+
+        let data = semuaKegiatan.value.filter(item => 
+          item.tipe?.toLowerCase() === 'event'
+        );
+
+        if (activeFilter.value !== 'all') {
+          const statusMap = {
+            upcoming: ['upcoming'],
+            ongoing: ['ongoing'],
+            selesai: ['selesai']
+          };
+
+          const targetStatuses = statusMap[activeFilter.value] || [activeFilter.value];
+
+          data = data.filter(item =>
+            targetStatuses.includes(item.status)
+          );
+        }
+
+        return data;
+      });
+
+      const featuredEvent = computed(() => {
+        if (!semuaKegiatan.value.length) return null;
+
+        return (
+          semuaKegiatan.value.find(k => k.tipe === 'event' && k.status === 'upcoming') ||
+          semuaKegiatan.value.find(k => k.tipe === 'event' && k.status === 'ongoing') ||
+          semuaKegiatan.value.find(k => k.tipe === 'event') ||
+          semuaKegiatan.value[0]
+        );
+      });
+
+      const kegiatanRutin = computed(() => {
+
+        const urutanHari = {
+          'senin': 1,
+          'selasa': 2,
+          'rabu': 3,
+          'kamis': 4,
+          'jumat': 5,
+          'sabtu': 6,
+          'minggu': 7
+        };
+
+        return semuaKegiatan.value
+          .filter(item => item.tipe === 'rutin')
+          .sort((a, b) => {
+            const hariA = (a.hari || '').toLowerCase().split(',')[0].trim();
+            const hariB = (b.hari || '').toLowerCase().split(',')[0].trim();
+
+            return (urutanHari[hariA] || 99) - (urutanHari[hariB] || 99);
+          });
+      });
+
+      function getImageUrl(namaFile) {
+        if (!namaFile) return PLACEHOLDER;
+
+        return `${location.origin}/PABowo/assets/images/kegiatan/${namaFile}`;
+      }
+
+      function onImgError(event) {
+        event.target.removeEventListener('error', onImgError);
+        event.target.src = PLACEHOLDER;
+      }
+
+
+      function formatTanggal(dateString) {
+        if (!dateString) return '-';
+        try {
+          const date = new Date(dateString + 'T00:00:00');
+          return date.toLocaleDateString('id-ID', {
+            day:   'numeric',
+            month: 'long',
+            year:  'numeric'
+          });
+        } catch {
+          return dateString;
+        }
+      }
+
+      function formatWaktu(timeString) {
+        if (!timeString) return '';
+        const parts = timeString.split(':');
+        if (parts.length >= 2) {
+          return `${parts[0]}.${parts[1]}`;
+        }
+        return timeString;
+      }
+
+      function getLabelStatus(status) {
+        const labels = {
+          'upcoming': 'Akan Datang',
+          'ongoing':  'Berlangsung',
+          'selesai':  'Selesai',
+          'done':     'Selesai'
+        };
+        return labels[status] || status;
+      }
+
+      function getBadgeClass(status) {
+        const classes = {
+          'upcoming': 'badge-upcoming',
+          'ongoing':  'badge-ongoing',
+          'selesai':  'badge-done',
+          'done':     'badge-done'
+        };
+        return classes[status] || 'badge-done';
+      }
+
+      function getTagClass(tipe) {
+        const classes = {
+          'rutin':      'religi',
+          'event':      'budaya',
+          'pendidikan': 'pendidikan',
+          'sosial':     'sosial'
+        };
+        return classes[tipe] || '';
+      }
+
+      function truncate(text, maxLength) {
+        if (!text) return '';
+        return text.length > maxLength
+          ? text.substring(0, maxLength) + '...'
+          : text;
+      }
+
+      onMounted(() => {
+        loadKegiatan();
+      });
+
+
+      return {
+        // State
+        isLoading,
+        isError,
+        activeFilter,
+        semuaKegiatan,
+        selectedKegiatan,
+
+        // Computed
+        filteredKegiatan,
+        featuredEvent,
+        kegiatanRutin,
+
+        // Methods
+        loadKegiatan,
+        getImageUrl,
+        onImgError,
+        formatTanggal,
+        formatWaktu,
+        getLabelStatus,
+        getBadgeClass,
+        getTagClass,
+        truncate
+      };
+    }
+
+  }).mount('#app-kegiatan');
+  </script>
+
+  <script src="../assets/script/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masjid Shiratal Mustaqiem Samarinda</title>
+  <link rel="icon" href="../assets/images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/publik.css" />
+  <link rel="stylesheet" href="../assets/css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div id="app-index">
+
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+          <div class="nav-brand-icon"><i class="fas fa-mosque"></i></div>
+          <div class="nav-brand-text">
+            <span class="nav-brand-main">Masjid Shiratal Mustaqiem</span>
+            <span class="nav-brand-sub">Warisan Sejarah Masjid</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="sejarah.html">Sejarah</a></li>
+          <li><a href="kegiatan.html">Kegiatan</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="lokasi.html">Lokasi</a></li>
+          <li><a href="ulasan.html">Ulasan</a></li>
+        </ul>
+
+        <button class="nav-toggler" id="nav-toggler" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu navigasi">
+      <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Tutup menu">
+        <i class="fas fa-times"></i>
+      </button>
+      <a href="index.html" class="active">Home</a>
+      <a href="sejarah.html">Sejarah</a>
+      <a href="kegiatan.html">Kegiatan</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="lokasi.html">Lokasi</a>
+      <a href="ulasan.html">Ulasan</a>
+    </div>
+
+    <section class="hero">
+      <img
+        class="hero-img"
+        src="..\assets\images\galeri\home.jpg"
+        alt="Masjid Shiratal Mustaqiem Samarinda"
+      />
+      <div class="hero-bg"></div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Masjid <em>Shiratal</em><br>Mustaqiem<br>Samarinda
+        </h1>
+        <p class="hero-subtitle">
+          Warisan Islam tertua di Kalimantan Timur. Saksi bisu peradaban dan spiritualitas masyarakat Samarinda sejak abad ke-19.
+        </p>
+        <div class="hero-actions">
+          <a href="sejarah.html" class="btn btn-primary">
+            <i class="fas fa-book-open"></i> Jelajahi Jejak Sejarah
+          </a>
+          <a href="galeri.html" class="btn btn-outline">
+            <i class="fas fa-images"></i> Lihat Keindahan Masjid
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num">1881</div>
+            <div class="hero-stat-label">Tahun Berdiri</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">143+</div>
+            <div class="hero-stat-label">Tahun Sejarah</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">#1</div>
+            <div class="hero-stat-label">Masjid Tertua Kaltim</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-info">
+      <div class="container px-3">
+        <div class="section-header centered fade-up">
+          <span class="section-label">Sekilas Info</span>
+          <h2 class="section-title">Mengenal Lebih Dekat</h2>
+          <p class="section-subtitle">Temukan fakta penting tentang salah satu warisan budaya Islam paling berharga di Kalimantan Timur.</p>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card fade-up">
+            <div class="info-card-icon emerald"><i class="fas fa-landmark"></i></div>
+            <h3>Sejarah Singkat</h3>
+            <p>Dibangun pada tahun 1881 oleh Sultan Kutai, masjid ini merupakan yang tertua di Kalimantan Timur. Didirikan dengan arsitektur Melayu tradisional yang khas dan telah melalui beberapa pemugaran.</p>
+            <a href="sejarah.html" class="info-card-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="info-card fade-up">
+            <div class="info-card-icon gold"><i class="fas fa-map-pin"></i></div>
+            <h3>Lokasi Strategis</h3>
+            <p>Terletak di Jl. KH. Abul Hasan No. 1, Kelurahan Baqa, Kecamatan Samarinda Seberang, Kota Samarinda, Kalimantan Timur, tepat di tepi Sungai Mahakam.</p>
+            <a href="lokasi.html" class="info-card-link">Lihat Peta <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="info-card fade-up">
+            <div class="info-card-icon brown"><i class="fas fa-award"></i></div>
+            <h3>Status Cagar Budaya</h3>
+            <p>Ditetapkan sebagai Cagar Budaya Nasional dan diakui secara nasional. Dilindungi oleh UU No. 11 Tahun 2010 tentang Cagar Budaya.</p>
+            <a href="sejarah.html#status" class="info-card-link">Detail Status <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-sejarah">
+      <div class="container px-3">
+        <div class="featured-sejarah-inner">
+          <div class="featured-img-wrapper fade-up">
+            <img
+              src="../assets/images/galeri/1776565679_Foto_Masjid_Saat_Ini.png"
+              alt="Foto Masjid Saat Ini"
+              onerror="this.src='https://images.unsplash.com/photo-1564769625905-50e93615e769?w=900&q=80'"
+            />
+            <div class="featured-img-badge">
+              <div class="year">1881</div>
+              <div class="label">Tahun Berdiri</div>
+            </div>
+          </div>
+
+          <div class="featured-text fade-up">
+            <span class="section-label">Warisan Leluhur</span>
+            <h2 class="section-title">Lebih dari Sekadar Tempat Ibadah</h2>
+            <p style="color:var(--gray-500); font-size:0.975rem; line-height:1.85; margin-bottom:1rem;">
+              Masjid Shiratal Mustaqiem bukan hanya sebuah tempat beribadah — ia adalah monumen hidup yang menyimpan ribuan kisah perjuangan, peradaban, dan keimanan masyarakat Samarinda selama lebih dari satu abad.
+            </p>
+            <p style="color:var(--gray-500); font-size:0.975rem; line-height:1.85; margin-bottom:1.5rem;">
+              Arsitektur uniknya memadukan tradisi Melayu dengan sentuhan Islam Nusantara, menjadikannya daya tarik wisata religi dan budaya yang tak tertandingi di Kalimantan Timur.
+            </p>
+            <div class="featured-facts">
+              <div class="fact-item">
+                <div class="fact-label">Arsitektur</div>
+                <div class="fact-value">Melayu Tradisional</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-label">Material Utama</div>
+                <div class="fact-value">Kayu Ulin</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-label">Kapasitas</div>
+                <div class="fact-value">±1.000 Jemaah</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-label">Luas Area</div>
+                <div class="fact-value">±2.500 m²</div>
+              </div>
+            </div>
+            <a href="sejarah.html" class="btn btn-emerald">
+              <i class="fas fa-book-open"></i> Baca Artikel Lengkap
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stat-strip">
+      <div class="container px-3">
+        <div class="stat-grid">
+          <div class="stat-item fade-up">
+            <div class="stat-num" data-count="143" data-suffix="+">0</div>
+            <div class="stat-label">Tahun Berdiri</div>
+          </div>
+          <div class="stat-item fade-up">
+            <div class="stat-num" data-count="1000" data-suffix="+">0</div>
+            <div class="stat-label">Kapasitas Jemaah</div>
+          </div>
+          <div class="stat-item fade-up">
+            <div class="stat-num" data-count="24" data-suffix="">0</div>
+            <div class="stat-label">Kegiatan per Tahun</div>
+          </div>
+          <div class="stat-item fade-up">
+            <div class="stat-num" data-count="50000" data-suffix="+">0</div>
+            <div class="stat-label">Pengunjung per Tahun</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section preview-kegiatan">
+      <div class="container px-3">
+        <div class="section-header fade-up">
+          <span class="section-label">Kegiatan & Acara</span>
+          <h2 class="section-title">Program Unggulan</h2>
+          <p class="section-subtitle">Berbagai kegiatan keagamaan, budaya, dan pendidikan yang diselenggarakan secara rutin.</p>
+        </div>
+
+        <div class="kegiatan-grid ">
+          <template v-if="isLoadingKegiatan">
+            <div
+              v-for="n in 3"
+              :key="'k-skel-' + n"
+              class="kegiatan-card-skeleton"
+            >
+              <div class="skeleton sk-img"></div>
+              <div class="sk-body">
+                <div class="skeleton sk-tag"></div>
+                <div class="skeleton sk-h3"></div>
+                <div class="skeleton sk-p1"></div>
+                <div class="skeleton sk-p2"></div>
+              </div>
+            </div>
+          </template>
+
+          <div
+            v-else-if="isErrorKegiatan"
+            style="grid-column:1/-1; text-align:center; padding:3rem 1rem; color:var(--gray-500);"
+          >
+            <i class="fas fa-exclamation-triangle" style="font-size:2rem; color:#DC2626; display:block; margin-bottom:0.75rem;"></i>
+            <p style="margin-bottom:1rem;">Gagal memuat data kegiatan.</p>
+            <button class="btn btn-emerald" @click="fetchKegiatan">
+              <i class="fas fa-redo"></i> Coba Lagi
+            </button>
+          </div>
+
+          <div
+            v-else
+            v-for="(item, index) in kegiatanTerbaru"
+            :key="item.id"
+            class="kegiatan-card"
+            :style="{ transitionDelay: index * 0.1 + 's' }"
+          >
+            <div class="kegiatan-card-img">
+
+              <img
+                :src="getKegiatanImageUrl(item.gambar)"
+                :alt="item.judul"
+                loading="lazy"
+                @error="onImgError($event)"
+              />
+
+              <span class="kegiatan-badge" :class="getBadgeClass(item.status)">
+                {{ getLabelStatus(item.status) }}
+              </span>
+            </div>
+
+            <div class="kegiatan-card-body">
+              <div class="kegiatan-date">
+                <i class="fas fa-calendar-alt"></i>
+
+                <span v-if="item.tipe === 'rutin' && item.hari">{{ item.hari }}</span>
+                <span v-else>{{ formatTanggal(item.tanggal) }}</span>
+              </div>
+              <h3>{{ item.judul }}</h3>
+              <p>{{ truncate(item.deskripsi, 100) }}</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section-view-all fade-up">
+          <a href="kegiatan.html" class="btn btn-emerald">
+            <i class="fas fa-calendar-check"></i> Lihat Semua Kegiatan
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section preview-galeri">
+      <div class="container px-3">
+        <div class="section-header fade-up">
+          <span class="section-label">Galeri Foto</span>
+          <h2 class="section-title">Keindahan yang Terabadikan</h2>
+          <p class="section-subtitle">Kumpulan foto yang menampilkan keindahan arsitektur dan suasana spiritual masjid bersejarah ini.</p>
+        </div>
+
+        <div class="galeri-preview-grid fade-up">
+
+          <template v-if="isLoadingGaleri">
+            <div
+              v-for="n in 5"
+              :key="'g-skel-' + n"
+              class="galeri-item-skeleton skeleton"
+              :class="{ 'span-2': n === 1 }"
+              :style="{ minHeight: n === 1 ? '100%' : '240px' }"
+            ></div>
+          </template>
+
+          <div
+            v-else-if="isErrorGaleri"
+            style="grid-column:1/-1; text-align:center; padding:3rem 1rem; color:var(--gray-500);"
+          >
+            <i class="fas fa-exclamation-triangle" style="font-size:2rem; color:#DC2626; display:block; margin-bottom:0.75rem;"></i>
+            <p style="margin-bottom:1rem;">Gagal memuat data galeri.</p>
+            <button class="btn btn-primary" @click="fetchGaleri">
+              <i class="fas fa-redo"></i> Coba Lagi
+            </button>
+          </div>
+
+          <div
+            v-else
+            v-for="(item, index) in galeriTerbaru"
+            :key="item.id"
+            class="galeri-item"
+            :class="{ 'span-2': index === 0 }"
+          >
+
+            <img
+              :src="getGaleriImageUrl(item.gambar)"
+              :alt="item.judul"
+              loading="lazy"
+              @error="onImgError($event)"
+            />
+
+            <div class="galeri-item-overlay">
+              <span>
+                <i class="fas fa-expand"></i>
+                {{ item.judul }}
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section-view-all fade-up">
+          <a href="galeri.html" class="btn btn-primary">
+            <i class="fas fa-images"></i> Buka Galeri Lengkap
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="container px-3">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="footer-logo-icon"><i class="fas fa-mosque"></i></div>
+              <div>
+                <div class="footer-logo-text">Shiratal Mustaqiem</div>
+                <div class="footer-logo-sub">Digital Heritage Samarinda</div>
+              </div>
+            </div>
+            <p class="footer-desc">Platform informasi digital untuk pelestarian dan dokumentasi warisan budaya Islam Masjid Shiratal Mustaqiem Samarinda, Kalimantan Timur.</p>
+            <div class="footer-social">
+              <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Navigasi</h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+              <li><a href="sejarah.html"><i class="fas fa-chevron-right"></i> Sejarah</a></li>
+              <li><a href="kegiatan.html"><i class="fas fa-chevron-right"></i> Kegiatan</a></li>
+              <li><a href="galeri.html"><i class="fas fa-chevron-right"></i> Galeri</a></li>
+              <li><a href="lokasi.html"><i class="fas fa-chevron-right"></i> Lokasi</a></li>
+              <li><a href="ulasan.html"><i class="fas fa-chevron-right"></i> Ulasan</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Informasi</h4>
+            <ul class="footer-links">
+              <li><a href="#"><i class="fas fa-chevron-right"></i> Tentang Kami</a></li>
+              <li><a href="#"><i class="fas fa-chevron-right"></i> Kebijakan Privasi</a></li>
+              <li><a href="#"><i class="fas fa-chevron-right"></i> Kontak</a></li>
+              <li><a href="#"><i class="fas fa-chevron-right"></i> Donasi Pelestarian</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Kontak Kami</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Jl. KH. Abul Hasan No. 1, Baqa, Samarinda Seberang, Kalimantan Timur 75131</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-clock"></i>
+              <span>Terbuka setiap hari, 24 jam untuk ibadah</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@shiraatalmustaqiem.id</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Digital Heritage — Masjid Shiratal Mustaqiem Samarinda. Semua hak dilindungi.</span>
+        </div>
+      </div>
+    </footer>
+
+    <button id="back-to-top" title="Kembali ke atas"><i class="fas fa-chevron-up"></i></button>
+
+  </div>
+
+  <script src="../assets/script/script.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  const { createApp, ref, computed, onMounted, nextTick } = Vue;
+
+  createApp({
+    setup() {
+
+      const kegiatanList = ref([]);   
+      const galeriList   = ref([]);   
+
+      const isLoadingKegiatan = ref(true);
+      const isLoadingGaleri   = ref(true);
+      const isErrorKegiatan   = ref(false);
+      const isErrorGaleri     = ref(false);
+
+      const API_KEGIATAN    = '../api/kegiatan.php';
+      const API_GALERI      = '../api/galeri.php';
+      const IMG_KEGIATAN    = '../assets/images/kegiatan/';
+      const IMG_GALERI      = '../assets/images/galeri/';
+      const IMG_PLACEHOLDER = 'https://images.unsplash.com/photo-1564769625905-50e93615e769?w=600&q=80';
+
+      const galeriSaatIni = computed(() => {
+        return galeriList.value.find(item =>
+          item.judul?.toLowerCase() === 'saat ini'
+        );
+      });
+
+      function parseApiResponse(json) {
+        if (Array.isArray(json)) return json;
+        if (json && Array.isArray(json.data)) return json.data;
+        if (json && typeof json === 'object') {
+          const firstArr = Object.values(json).find(v => Array.isArray(v));
+          if (firstArr) return firstArr;
+        }
+        return [];
+      }
+
+      async function fetchKegiatan() {
+        isLoadingKegiatan.value = true;
+        isErrorKegiatan.value   = false;
+        try {
+          const res = await fetch(API_KEGIATAN);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const json = await res.json();
+          kegiatanList.value = parseApiResponse(json);
+        } catch (err) {
+          console.error('[Index] Fetch kegiatan error:', err);
+          isErrorKegiatan.value = true;
+        } finally {
+          isLoadingKegiatan.value = false;
+        }
+      }
+
+      async function fetchGaleri() {
+        isLoadingGaleri.value = true;
+        isErrorGaleri.value   = false;
+        try {
+          const res = await fetch(API_GALERI);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const json = await res.json();
+          galeriList.value = parseApiResponse(json);
+        } catch (err) {
+          console.error('[Index] Fetch galeri error:', err);
+          isErrorGaleri.value = true;
+        } finally {
+          isLoadingGaleri.value = false;
+        }
+      }
+
+      const kegiatanTerbaru = computed(() => {
+        return kegiatanList.value
+          .filter(item => item.tipe === 'event') 
+          .slice(0, 3); 
+      });
+
+      const galeriTerbaru = computed(() => {
+        return galeriList.value.slice(0, 5);
+      });
+
+      const sekarang = computed(() =>
+        kegiatanList.value.find(item =>
+          item.judul?.toLowerCase().includes('saat')
+        )
+      );
+
+      function getKegiatanImageUrl(namaFile) {
+        if (!namaFile || namaFile.trim() === '') return IMG_PLACEHOLDER;
+        return IMG_KEGIATAN + namaFile;
+      }
+
+      function getGaleriImageUrl(namaFile) {
+        if (!namaFile || namaFile.trim() === '') return IMG_PLACEHOLDER;
+        return IMG_GALERI + namaFile;
+      }
+
+      function onImgError(event) {
+        event.target.removeEventListener('error', onImgError);
+        event.target.src = IMG_PLACEHOLDER;
+      }
+
+
+      function formatTanggal(dateString) {
+        if (!dateString) return '-';
+        try {
+          const date = new Date(dateString + 'T00:00:00');
+          return date.toLocaleDateString('id-ID', {
+            day: 'numeric', month: 'long', year: 'numeric'
+          });
+        } catch {
+          return dateString;
+        }
+      }
+
+      function getLabelStatus(status) {
+        const map = {
+          'upcoming': 'Akan Datang',
+          'ongoing':  'Berlangsung',
+          'selesai':  'Selesai',
+          'done':     'Selesai',
+          'rutin':    'Rutin'
+        };
+        return map[status] || status || '-';
+      }
+
+
+      function getBadgeClass(status) {
+        const map = {
+          'upcoming': 'badge-upcoming',
+          'ongoing':  'badge-ongoing',
+          'selesai':  'badge-done',
+          'done':     'badge-done',
+          'rutin':    'badge-ongoing'
+        };
+        return map[status] || 'badge-done';
+      }
+
+      function truncate(text, maxLength) {
+        if (!text) return '';
+        return text.length > maxLength
+          ? text.substring(0, maxLength) + '...'
+          : text;
+      }
+
+      onMounted(async () => {
+        await Promise.all([
+          fetchKegiatan(),
+          fetchGaleri()
+        ]);
+
+        await nextTick();
+        if (typeof AOS !== 'undefined') AOS.refresh();
+      });
+
+      return {
+        isLoadingKegiatan,
+        isLoadingGaleri,
+        isErrorKegiatan,
+        isErrorGaleri,
+
+        kegiatanTerbaru,  
+        galeriTerbaru,    
+
+        fetchKegiatan,
+        fetchGaleri,
+
+        getKegiatanImageUrl,
+        getGaleriImageUrl,
+        onImgError,
+        formatTanggal,
+        getLabelStatus,
+        getBadgeClass,
+        truncate
+      };
+    }
+
+  }).mount('#app-index');
+  </script>
+</body>
+</html>

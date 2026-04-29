@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lokasi — Masjid Shiratal Mustaqiem Samarinda</title>
+  <link rel="icon" href="../assets/images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/publik.css" />
+  <link rel="stylesheet" href="../assets/css/lokasi.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <nav id="navbar" class="scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-icon"><i class="fas fa-mosque"></i></div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-main">Masjid Shiratal Mustaqiem</span>
+          <span class="nav-brand-sub">Warisan Sejarah Masjid</span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sejarah.html">Sejarah</a></li>
+        <li><a href="kegiatan.html">Kegiatan</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="lokasi.html" class="active">Lokasi</a></li>
+        <li><a href="ulasan.html">Ulasan</a></li>
+      </ul>
+      <button class="nav-toggler" id="nav-toggler" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true">
+    <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Tutup menu"><i class="fas fa-times"></i></button>
+    <a href="index.html">Home</a>
+    <a href="sejarah.html">Sejarah</a>
+    <a href="kegiatan.html">Kegiatan</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="lokasi.html" class="active">Lokasi</a>
+    <a href="ulasan.html">Ulasan</a>
+  </div>
+
+  <header class="page-header">
+    <div class="container page-header-content">
+      <div class="page-header-eyebrow"><i class="fas fa-map-marker-alt"></i> Informasi Lokasi</div>
+      <h1 class="page-header-title">Cara Menuju Lokasi</h1>
+      <p class="page-header-subtitle">Temukan Masjid Shiratal Mustaqiem dengan mudah menggunakan panduan lokasi kami.</p>
+      <nav class="breadcrumb">
+        <a href="index.html">Beranda</a>
+        <i class="fas fa-chevron-right"></i>
+        <span class="current">Lokasi</span>
+      </nav>
+    </div>
+  </header>
+
+  <section class="lokasi-page">
+    <div class="container">
+      <div class="lokasi-grid fade-up">
+
+        <div>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps?q=Masjid%20Shirathal%20Mustaqiem%20Samarinda&output=embed"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Lokasi Masjid Shiratal Mustaqiem"
+            ></iframe>
+          </div>
+
+          <div style="margin-top:1.5rem; display:flex; gap:1rem;">
+            <a
+              href="https://maps.google.com/?q=Masjid+Shiratal+Mustaqiem+Samarinda"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-emerald"
+              style="flex:1; justify-content:center;"
+            >
+              <i class="fas fa-directions"></i> Buka di Google Maps
+            </a>
+          </div>
+
+          <div style="margin-top:2.5rem;">
+            <div class="section-label" style="display:block; margin-bottom:1rem;">Tempat Terdekat</div>
+            <div class="nearby-grid">
+              <div class="nearby-item">
+                <div class="nearby-icon"><i class="fas fa-hotel"></i></div>
+                <div>
+                  <div class="nearby-name">Hotel Grand Sawit</div>
+                  <div class="nearby-dist"><i class="fas fa-route"></i> ±2.3 km</div>
+                </div>
+              </div>
+              <div class="nearby-item">
+                <div class="nearby-icon"><i class="fas fa-shopping-bag"></i></div>
+                <div>
+                  <div class="nearby-name">Pasar Pagi Samarinda</div>
+                  <div class="nearby-dist"><i class="fas fa-route"></i> ±800 m</div>
+                </div>
+              </div>
+              <div class="nearby-item">
+                <div class="nearby-icon"><i class="fas fa-plane"></i></div>
+                <div>
+                  <div class="nearby-name">Bandara APT Pranoto</div>
+                  <div class="nearby-dist"><i class="fas fa-route"></i> ±14 km</div>
+                </div>
+              </div>
+              <div class="nearby-item">
+                <div class="nearby-icon"><i class="fas fa-utensils"></i></div>
+                <div>
+                  <div class="nearby-name">Warung Makan Mahakam</div>
+                  <div class="nearby-dist"><i class="fas fa-route"></i> ±150 m</div>
+                </div>
+              </div>
+              <div class="nearby-item">
+                <div class="nearby-icon"><i class="fas fa-water"></i></div>
+                <div>
+                  <div class="nearby-name">Dermaga Sungai Mahakam</div>
+                  <div class="nearby-dist"><i class="fas fa-route"></i> ±200 m</div>
+                </div>
+              </div>
+              <div class="nearby-item">
+                <div class="nearby-icon"><i class="fas fa-parking"></i></div>
+                <div>
+                  <div class="nearby-name">Area Parkir Umum</div>
+                  <div class="nearby-dist"><i class="fas fa-route"></i> ±50 m</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="margin-bottom:1.25rem;">
+            <span class="open-now">Terbuka Sekarang</span>
+          </div>
+
+          <div class="lokasi-info-card big-card">
+            <h3><i class="fas fa-map-marker-alt"></i> Informasi Lokasi</h3>
+
+            <div class="info-block">
+              <strong>Alamat</strong>
+              <p>Jl. KH. Abul Hasan No. 1, Baqa, Samarinda Seberang, Kalimantan Timur</p>
+            </div>
+
+            <div class="info-block">
+              <strong>Koordinat</strong>
+              <p>0°29'52.5"S 117°8'30.0"E</p>
+            </div>
+
+            <div class="info-block">
+              <strong>Jam Operasional</strong>
+              <p>24 Jam (Ibadah)<br>Wisata: 08.00–17.00 WITA</p>
+            </div>
+
+            <div class="info-note">
+              Masjid terbuka 24 jam untuk ibadah. Disarankan kunjungan pagi hari.
+            </div>
+          </div>
+
+          <div class="lokasi-info-card big-card">
+            <h3><i class="fas fa-road"></i> Panduan Kunjungan</h3>
+
+            <div class="akses-item">
+              <i class="fas fa-car"></i>
+              <span><strong>Kendaraan:</strong> ±15–20 menit dari pusat kota.</span>
+            </div>
+
+            <div class="akses-item">
+              <i class="fas fa-ship"></i>
+              <span><strong>Klotok:</strong> ±10 menit penyeberangan.</span>
+            </div>
+
+            <div class="akses-item">
+              <i class="fas fa-check"></i>
+              <span>Gunakan pakaian sopan.</span>
+            </div>
+
+            <div class="akses-item">
+              <i class="fas fa-check"></i>
+              <span>Lepas sepatu sebelum masuk.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i class="fas fa-mosque"></i></div>
+            <div>
+              <div class="footer-logo-text">Shiratal Mustaqiem</div>
+              <div class="footer-logo-sub">Digital Heritage Samarinda</div>
+            </div>
+          </div>
+          <p class="footer-desc">Platform informasi digital untuk pelestarian warisan budaya Islam Masjid Shiratal Mustaqiem Samarinda.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+            <li><a href="sejarah.html"><i class="fas fa-chevron-right"></i> Sejarah</a></li>
+            <li><a href="kegiatan.html"><i class="fas fa-chevron-right"></i> Kegiatan</a></li>
+            <li><a href="galeri.html"><i class="fas fa-chevron-right"></i> Galeri</a></li>
+            <li><a href="lokasi.html"><i class="fas fa-chevron-right"></i> Lokasi</a></li>
+            <li><a href="ulasan.html"><i class="fas fa-chevron-right"></i> Ulasan</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informasi</h4>
+          <ul class="footer-links">
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Tentang Kami</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Jl. KH. Abul Hasan No. 1, Baqa, Samarinda Seberang, Kaltim 75131</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@shiraatalmustaqiem.id</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Digital Heritage — Masjid Shiratal Mustaqiem Samarinda.</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" title="Kembali ke atas"><i class="fas fa-chevron-up"></i></button>
+  <script src="../assets/script/script.js"></script>
+</body>
+</html>
